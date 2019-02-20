@@ -12,15 +12,18 @@ buildscript {
 
 apply plugin: 'com.mparticle.kit'
 
+android {
+    defaultConfig {
+        minSdkVersion 16
+    }
+}
+
 
 dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation project(':testutils')
     testImplementation files('libs/java-json.jar')
-    testImplementation 'org.mockito:mockito-core:2.7.22'
+    testImplementation 'org.mockito:mockito-core:2.18.3'
 
-    implementation 'com.google.firebase:firebase-core:16.0.6'
-
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.firebase:firebase-core:17.0.0'
 }
